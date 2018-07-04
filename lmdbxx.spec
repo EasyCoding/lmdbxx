@@ -33,8 +33,10 @@ mkdir -p %{buildroot}%{_includedir}
 install -m 0644 -p lmdb++.h %{buildroot}%{_includedir}
 
 %files devel
-%doc README.rst AUTHORS CREDITS TODO
+%doc README.rst AUTHORS CREDITS
 %license UNLICENSE
 %{_includedir}/lmdb++.h
 
 %changelog
+* Wed Jul 04 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0.9.14.1-0.1.20160229git0b43ca8
+- Initial SPEC release.
