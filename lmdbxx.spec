@@ -5,7 +5,7 @@
 Name: lmdbxx
 Summary: C++ wrapper for the LMDB embedded B+ tree database library
 Version: 0.9.14.1
-Release: 0.1.%{date}git%{shortcommit0}%{?dist}
+Release: 1.%{date}git%{shortcommit0}%{?dist}
 
 License: Public Domain
 URL: https://github.com/bendiken/%{name}
@@ -39,5 +39,5 @@ install -m 0644 -p lmdb++.h %{buildroot}%{_includedir}
 %{_includedir}/lmdb++.h
 
 %changelog
-* Wed Jul 04 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0.9.14.1-0.1.20160229git0b43ca8
+* Wed Jul 04 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0.9.14.1-1.20160229git0b43ca8
 - Initial SPEC release.
