@@ -27,7 +27,7 @@ Provides: %{name}-static = %{?epoch:%{epoch}:}%{version}-%{release}
 %autosetup -n %{name}-%{commit0}
 
 %build
-doxygen
+# Nothing to build. Header-only library.
 
 %install
 mkdir -p %{buildroot}%{_includedir}
