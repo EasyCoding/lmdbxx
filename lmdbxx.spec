@@ -17,6 +17,7 @@ Header-only %{summary}.
 
 %package devel
 Summary: Development files for %{name}
+Requires: lmdb-devel
 Provides: %{name}-static = %{?epoch:%{epoch}:}%{version}-%{release}
 
 %description devel
