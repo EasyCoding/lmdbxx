@@ -5,7 +5,7 @@
 Name: lmdbxx
 Summary: C++ wrapper for the LMDB embedded B+ tree database library
 Version: 0.9.14.1
-Release: 2.%{date}git%{shortcommit0}%{?dist}
+Release: 3.%{date}git%{shortcommit0}%{?dist}
 
 License: Public Domain
 URL: https://github.com/bendiken/%{name}
@@ -39,6 +39,9 @@ install -m 0644 -p lmdb++.h %{buildroot}%{_includedir}
 %{_includedir}/lmdb++.h
 
 %changelog
+* Fri Feb 01 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.9.14.1-3.20160229git0b43ca8
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
+
 * Fri Jul 13 2018 Fedora Release Engineering <releng@fedoraproject.org> - 0.9.14.1-2.20160229git0b43ca8
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
