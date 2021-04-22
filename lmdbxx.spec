@@ -1,15 +1,11 @@
-%global commit0 0b43ca87d8cfabba392dfe884eb1edb83874de02
-%global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
-%global date 20160229
-
 Name: lmdbxx
-Summary: C++ wrapper for the LMDB embedded B+ tree database library
-Version: 0.9.14.1
-Release: 7.%{date}git%{shortcommit0}%{?dist}
+Version: 1.0.0
+Release: 1%{?dist}
 
 License: Public Domain
-URL: https://github.com/bendiken/%{name}
-Source0: %{url}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
+Summary: C++ wrapper for the LMDB embedded B+ tree database library
+URL: https://github.com/hoytech/%{name}
+Source0: %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 BuildArch: noarch
 
 %description
@@ -24,21 +20,24 @@ Provides: %{name}-static = %{?epoch:%{epoch}:}%{version}-%{release}
 %{summary}.
 
 %prep
-%autosetup -n %{name}-%{commit0}
+%autosetup
 
 %build
-# Nothing to build. Header-only library.
+%set_build_flags
+%make_build
 
 %install
-mkdir -p %{buildroot}%{_includedir}
-install -m 0644 -p lmdb++.h %{buildroot}%{_includedir}
+%make_install PREFIX=%{_prefix}
 
 %files devel
-%doc README.rst AUTHORS CREDITS
+%doc README.md FUNCTIONS.rst AUTHORS CREDITS VERSION
 %license UNLICENSE
 %{_includedir}/lmdb++.h
 
 %changelog
+* Thu Apr 22 2021 Vitaly Zaitsev <vitaly@easycoding.org> - 1.0.0-1
+- Updated to version 1.0.0.
+
 * Tue Jan 26 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.9.14.1-7.20160229git0b43ca8
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
 
