@@ -8,6 +8,8 @@ URL: https://github.com/hoytech/%{name}
 Source0: %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 BuildArch: noarch
 
+BuildRequires: make
+
 %description
 Header-only %{summary}.
 
